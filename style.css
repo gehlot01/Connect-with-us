@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+    margin: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 800px; /* Fixed width */
+    margin: 0 auto;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 400px; /* Minimum width */
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.a {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ab, .cd {
+    width: calc(50% - 10px); /* Fixed width based on container */
+    padding: 20px;
+}
+
+.ab {
+    background-color: #f9f9f9;
+}
+
+.cd {
+    background-color: blue;
+    color: white;
+}
+
+.abc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.abc div {
+    width: calc(50% - 5px);
+}
+
+.container p {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 15px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0;
+        padding: 20px;
+    }
+
+    .abc {
+        flex-direction: column;
+    }
+
+    .abc div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .ab, .cd {
+        width: 100%;
+    }
+}
+
+@media (max-width: 570px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%;
+        min-width: 400px; /* Ensure minimum width of 400px */
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+}
